@@ -1,0 +1,11 @@
+# Bilibili 直播间房间号
+room_id = 12345
+
+# API 服务端口
+api_port = 8080
+
+# 指令配置（可选，以下为默认值）
+[commands]
+song_prefix = "点歌 "
+skip_keyword = "切歌"
+next_keywords = ["切视频", "下一个"]

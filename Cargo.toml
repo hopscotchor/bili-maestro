@@ -1,0 +1,57 @@
+[package]
+name = "bili-maestro"
+version = "0.1.0"
+edition = "2021"
+description = "Bilibili live danmaku reader for song requests and video control"
+license = "MIT"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# WebSocket client (connecting to Bilibili)
+tokio-tungstenite = { version = "0.24", features = ["native-tls"] }
+
+# HTTP client (Bilibili API + Wbi signing)
+reqwest = { version = "0.12", features = ["json"] }
+
+# API server
+actix-web = "4"
+actix-ws = "0.3"
+
+# Compression
+flate2 = "1"
+brotli = "7"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+# Wbi signing
+md-5 = "0.10"
+
+# UUID for command IDs
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Async trait
+async-trait = "0.1"
+
+# URL encoding for Wbi
+urlencoding = "2"
+
+# Futures utilities
+futures-util = "0.3"
+
+# Error handling
+anyhow = "1"
