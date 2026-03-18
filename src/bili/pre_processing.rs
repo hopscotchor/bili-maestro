@@ -57,7 +57,10 @@ impl<'a> PreProcess<'a> {
             && self.need_csrf
             && vec![Method::POST, Method::DELETE, Method::PATCH].contains(&self.request.method())
         {
-            todo!("add body field")
+            self.data.insert(
+                "csrf".into(),
+                self.credential.iter().unwrap().bili_jct.unwrap(),
+            );
         }
 
         Ok(())
