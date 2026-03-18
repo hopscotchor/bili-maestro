@@ -1,3 +1,3 @@
 pub mod api;
+pub mod bili;
 pub mod command;
-pub mod source;
