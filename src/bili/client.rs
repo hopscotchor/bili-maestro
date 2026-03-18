@@ -3,7 +3,7 @@ use tokio::net::TcpStream;
 use tokio_tungstenite::{connect_async, MaybeTlsStream, WebSocketStream};
 
 pub struct BiliClient {
-    http_client: reqwest::Client,
+    pub http_client: reqwest::Client,
     ws_client: Option<WebSocketStream<MaybeTlsStream<TcpStream>>>,
 }
 
